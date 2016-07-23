@@ -1,0 +1,31 @@
+<templates>
+    <template id="user_rows.stud">
+        <td class='{name}'>{name} - {age} some of them are useful at location {location} as specified in the docs.</td>
+    </template>
+
+    <template id="core_form.stud">
+        <div class='slick-form-title-bar'>
+            <span class='form-title'>
+                <span class='title-text'>{title}</span>
+                <a class="slick-form-close" title="Close form" href="#">
+                    <i class="icon-cancel"></i>
+                </a>
+            </span>
+
+        </div>
+        <span id='slick-form-content'></span>
+        <fieldset class='slick-form-fields slicks-form-images hide'>
+            <span class='legend'>{image_title}</span>
+
+            <div class='split-row'>
+                <p class='caption'>Hover on image box in order to add/change image.</p>
+                <div class='box-images'>
+                    <div class='row' id='image-row' style='min-height:100px!important;'>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class='slick-form-submit'>
+        </fieldset>
+    </template>
+</templates>

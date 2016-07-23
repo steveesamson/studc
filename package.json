@@ -1,0 +1,24 @@
+{
+  "name": "studc",
+  "version": "1.0.0",
+  "description": "CLI for Stud; allow to compile templates from CLI.",
+  "main": "lib/studc.js",
+  "scripts": {
+    "test": "mocha ./tests/studc.js"
+  },
+  "keywords": [
+    "studc",
+    "template",
+    "compiler",
+    "CLI",
+    "cli",
+    "stud"
+  ],
+  "author": "Steve Samson <stevee.samson@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "slicks-fswalker": "^1.0.0",
+    "stud": "^1.0.5",
+    "xmldoc": "^0.5.1"
+  }
+}
