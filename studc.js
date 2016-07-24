@@ -3,7 +3,7 @@
 var stuc = require('./libs/studc'),
     args = process.argv.slice(2),
     help = function () {
-        console.error("usage: stubc  <source> -o  <distination>");
+        console.error("usage: studc  <source> -o  <distination>");
         process.exit();
     };
 
