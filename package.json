@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "CLI for Stud; allow to compile templates from CLI.",
   "main": "lib/studc.js",
+  "bin": {
+    "studc": "./studc.js"
+  },
   "scripts": {
     "test": "mocha ./tests/studc.js"
   },

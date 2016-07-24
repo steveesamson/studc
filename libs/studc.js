@@ -32,26 +32,24 @@ module.exports = {
                                 sb.append(done);
                             });
                         });
-                        if (!sb.length) return;
-                        var filename = paths.join(process.cwd(), dest);
+                        if (sb.length){
+                            var filename = paths.resolve(process.cwd(), dest);
 
-                        if (fs.statSync(filename).isDirectory()) {
-                            filename = paths.join(filename, fname) + ".js";
-                        } else {
-                            filename = filename.replace(/\.\w+$/, ".js");
+                            if (fs.statSync(filename).isDirectory()) {
+                                filename = paths.join(filename, fname) + ".js";
+                            } else {
+                                filename = filename.replace(/\.\w+$/, ".js");
+                            }
+
+                            fs.writeFile(filename, sb.toString(), 'utf8', function (e) {
+                                if (e) console.log(e);
+                            });
                         }
 
-                        fs.writeFile(filename, sb.toString(), 'utf8', function (e) {
-                            if (e) console.log(e);
-                        });
-
                     });
-
                 });
-
                 console.log("Templates compiled and Ok.");
             }
-
         });
     }
 
