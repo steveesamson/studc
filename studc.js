@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 var stuc = require('./libs/studc'),
+
     args = process.argv.slice(2),
     help = function () {
         console.error("usage: studc  <source> -o  <distination>");
@@ -11,11 +12,12 @@ if (args.length < 3) {
     help();
 }
 
-//console.log(args);
+console.log(args);
 
-var src = args[0].trim(),
+var src = args[0].trim() + '/**/*.html',
     operation = args[1].trim(),
     dest = args[2].trim();
+
 
 
 switch (operation) {

@@ -6,9 +6,6 @@
   "bin": {
     "studc": "./studc.js"
   },
-  "scripts": {
-    "test": "mocha ./tests/studc.js"
-  },
   "keywords": [
     "studc",
     "slicks",
@@ -23,6 +20,9 @@
   "dependencies": {
     "slicks-fswalker": "^1.0.0",
     "stud": "^1.0.5",
-    "xmldoc": "^0.5.1"
+  },
+  "devDependencies": {
+    "fs-extra": "^1.0.0",
+    "mkdirp": "^0.5.1"
   }
 }
