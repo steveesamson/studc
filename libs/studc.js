@@ -1,5 +1,4 @@
-var XmlDocument = require('xmldoc').XmlDocument,
-    fs = require('fs-extra'),
+var fs = require('fs-extra'),
     mkdirp = require('mkdirp'),
     stud = require('stud'),
     _ = require("slicks-utils"),
@@ -9,7 +8,6 @@ var XmlDocument = require('xmldoc').XmlDocument,
 module.exports = {
     dis: process.cwd(),
     compile: function (src, dest) {
-        console.log('src: ' + src);
         var self = this;
         if (!_.isString(src) || !_.isString(dest)) return console.log("Source and destination are mandatory for studc operations");
 
@@ -17,9 +15,7 @@ module.exports = {
             if (!e) {
                 _.each(files, function (i, filePath) {
 
-                    var ext = paths.extname(filePath),
-                        //fname = paths.basename(filePath, ext),
-                        targetName = filePath.replace(self.dis, "").substring(1),
+                    var targetName = filePath.replace(self.dis, "").substring(1),
                         targetName = targetName.substring(targetName.indexOf('/') + 1);
 
 
